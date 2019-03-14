@@ -1,0 +1,34 @@
+
+.header{
+  min-height: 8rem;
+  background-color: #00b5b5;
+  //background-image: linear-gradient(to bottom right, #5fbf44, #076d1a);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-shrink: 1;
+}
+
+
+.logo{
+  justify-self: flex-start;
+  margin-left: 2rem;
+}
+
+.nav-list{
+ margin: 0 auto;
+}
+
+.nav-list a{
+  font-weight: bold;
+  padding: 2rem 4rem;
+  text-decoration: none;
+  color:#FFFFFF;
+
+}
+
+.nav-list a:hover, .nav-list a:focus{
+  border-bottom: 2px solid #22d88c;
+}

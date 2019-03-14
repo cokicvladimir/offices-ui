@@ -25,6 +25,28 @@ code {
   monospace;
 }
 
-.App-header{
-  text-align: center;
+ul{
+  list-style-type: none;
 }
+
+.content{
+  display: flex;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+
+@import 'components/Header';
