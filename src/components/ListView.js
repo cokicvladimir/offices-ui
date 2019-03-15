@@ -30,7 +30,7 @@ class ListView extends Component{
                         sizeUnit={'px'}
                         size={15}
                         margin={'8px'}
-                        color={'#00b5b5'}
+                        color={'#00acc6'}
                         loading={true}
                     />
                 </div>
@@ -40,7 +40,7 @@ class ListView extends Component{
 
 
         return(
-            <div className='list-view'>
+            <div className='view'>
                 {this.state.officesList.map( office => (
                     <div key={office.id} className='row list-view-row'>
                         <div className='image-column'>

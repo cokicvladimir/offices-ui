@@ -1,0 +1,51 @@
+
+.grid-view{
+  flex-wrap: wrap;
+}
+
+.margin-fix{
+  margin:0 1rem;
+}
+
+.card{
+  border-radius: 6px;
+  //Calculating card Width by subtracting sum of horizontal margins and paddings of a card(4rem)
+  // from desired card widthPercentage (25% = 4 card displaying per row).
+  flex: 0 1 calc(25% - 4rem);
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  background-color: #FFFFFF;
+  color: #252422;
+  min-height: 10rem;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  text-align: justify;
+  font-family: 'Muli', "Helvetica", Arial, sans-serif;
+
+}
+
+.card-image{
+  display: flex;
+  flex-basis: 8rem;
+}
+
+.card-text>h1, h2,h3,h4,h5 {
+  //color: black;
+  //padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {flex: 0 1 calc(100% - 4rem);}
+}
+
+@media only screen and (min-width: 600px)and (max-width: 767px) {
+  .card {flex: 0 1 calc(50% - 4rem);}
+}
+
+@media only screen and (min-width: 767px)and (max-width: 862px) and (orientation: landscape) {
+  .card {flex: 0 1 calc(33% - 4rem);}
+}
+
+
+
+
+

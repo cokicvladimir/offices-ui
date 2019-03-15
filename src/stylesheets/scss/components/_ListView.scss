@@ -1,11 +1,12 @@
 
-.list-view{
-  background-color: #00b5b5;
+.view{
+  background-color: #00acc6;
   padding: 2rem 0;
 }
 
 .list-view-row{
   margin-top:1rem;
+
 }
 
 .image-column{
@@ -62,7 +63,7 @@
 }
 
 
-.office-description h1, h2,h3,h4,h5 {
+.office-description>h1, h2,h3,h4,h5 {
   color: #FFFFFF;
   padding-bottom: 1rem;
 }
