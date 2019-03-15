@@ -1,0 +1,68 @@
+
+.list-view{
+  background-color: #00b5b5;
+  padding: 2rem 0;
+}
+
+.list-view-row{
+  margin-top:1rem;
+}
+
+.image-column{
+  display: flex;
+  flex-basis: 8rem;
+  margin-left: 2rem;
+}
+.description-column{
+  border-bottom: 1px solid #009999;
+}
+// loading-bar details:    https://github.com/davidhu2000/react-spinners
+.loading-bar{
+  margin: 0 auto;
+  align-self: center;
+}
+
+.image{
+  display: inline-flex;
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: gainsboro;
+
+  justify-content:center;
+  align-items:center;
+}
+
+.image span{
+  font-weight: bold;
+  font-size: 1.8rem;
+
+}
+.image img{
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+
+  //max-width:100%;
+
+}
+
+.office-description{
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  font-size: 1.6rem;
+  color: #003333;
+}
+
+
+.office-description h1, h2,h3,h4,h5 {
+  color: #FFFFFF;
+  padding-bottom: 1rem;
+}

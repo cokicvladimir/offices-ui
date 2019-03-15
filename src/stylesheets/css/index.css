@@ -28,7 +28,8 @@ ul {
 
 .content {
   display: flex;
-  padding: 1rem;
+  padding: 2rem;
+  min-height: 80vh;
 }
 
 .row {
@@ -43,6 +44,38 @@ ul {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+}
+
+.column-2x {
+  flex: 2;
+}
+
+.column-3x {
+  flex: 3;
+}
+
+.column-4x {
+  flex: 4;
+}
+
+.column-5x {
+  flex: 5;
+}
+
+.column-6x {
+  flex: 6;
+}
+
+.column-7x {
+  flex: 7;
+}
+
+.column-8x {
+  flex: 8;
+}
+
+.column-9x {
+  flex: 9;
 }
 
 .header {
@@ -74,6 +107,70 @@ ul {
 
 .nav-list a:hover, .nav-list a:focus {
   border-bottom: 2px solid #22d88c;
+}
+
+.list-view {
+  background-color: #00b5b5;
+  padding: 2rem 0;
+}
+
+.list-view-row {
+  margin-top: 1rem;
+}
+
+.image-column {
+  display: flex;
+  flex-basis: 8rem;
+  margin-left: 2rem;
+}
+
+.description-column {
+  border-bottom: 1px solid #009999;
+}
+
+.loading-bar {
+  margin: 0 auto;
+  align-self: center;
+}
+
+.image {
+  display: inline-flex;
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: gainsboro;
+  justify-content: center;
+  align-items: center;
+}
+
+.image span {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.image img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.office-description {
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  font-size: 1.6rem;
+  color: #003333;
+}
+
+.office-description h1, h2, h3, h4, h5 {
+  color: #FFFFFF;
+  padding-bottom: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

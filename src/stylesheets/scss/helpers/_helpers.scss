@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.column-2x{
+  flex: 2;
+}
+.column-3x{
+  flex: 3;
+}
+.column-4x{
+  flex: 4;
+}
+.column-5x{
+  flex: 5;
+}
+.column-6x{
+  flex: 6;
+}
+.column-7x{
+  flex: 7;
+}
+.column-8x{
+  flex: 8;
+}
+.column-9x{
+  flex: 9;
+}
