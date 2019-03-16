@@ -1,77 +1,53 @@
-import React, {Component} from 'react';
-import officesAPI from '../api/offices';
+import React from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 import ReadMoreReact from 'read-more-react';
 
-class ListView extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            officesList: []
-        }
-    }
+const ListView = (props)=>{
 
-    componentDidMount(){
-        this.fetchOffices();
-
-    }
-
-    fetchOffices = async ()=>{
-        const offices = await officesAPI.get('/offices');
-        this.setState({ officesList: offices.data });
-    };
-
-    renderData = () => {
-        if (this.state.officesList.length === 0) {
-            console.log("NO DATA");
-            return (
-                <div className='loading-bar'>
-                    <PulseLoader
-                        sizeUnit={'px'}
-                        size={15}
-                        margin={'8px'}
-                        color={'#00acc6'}
-                        loading={true}
-                    />
-                </div>
-            );
-        }
-        return(
-            <div className='view'>
-                {this.state.officesList.map( office => (
-                    <div key={office.id} className='row list-view-row'>
-                        <div className='image-column'>
-                            {
-                                office.photo === null ?
-                                    (<div className='image'><span>{office.name.charAt(0).toUpperCase()}</span></div>) :
-                                (<div className='image'><img src={office.photo} alt={office.name}/></div>)
-                            }
-                        </div>
-                        <div className='column description-column'>
-                            <div className='office-description'>
-                                <h3 className='office-name'>{office.name}</h3>
-
-                                    <ReadMoreReact
-                                        text={office.description}
-                                        min={1}
-                                        ideal={100}
-                                        max={200}
-                                        readMoreText='read more'
-                                    />
-
-                            </div>
-                        </div>
-
-                    </div>
-                ))}
+    if (props.offices.length === 0) {
+        console.log("NO DATA");
+        return (
+            <div className='loading-bar'>
+                <PulseLoader
+                    sizeUnit={'px'}
+                    size={15}
+                    margin={'8px'}
+                    color={'#00acc6'}
+                    loading={true}
+                />
             </div>
         );
-    };
-
-    render(){
-        return this.renderData();
     }
 
+    return(
+        <div className='view'>
+            {props.offices.map( office => (
+                <div key={office.id} className='row list-view-row'>
+                    <div className='image-column'>
+                        {
+                            office.photo === null ?
+                                (<div className='image'><span>{office.name.charAt(0).toUpperCase()}</span></div>) :
+                                (<div className='image'><img src={office.photo} alt={office.name}/></div>)
+                        }
+                    </div>
+                    <div className='column description-column'>
+                        <div className='office-description'>
+                            <h3 className='office-name'>{office.name}</h3>
+                            <ReadMoreReact
+                                text={office.description}
+                                min={1}
+                                ideal={100}
+                                max={200}
+                                readMoreText='read more'
+                            />
+                        </div>
+                    </div>
+
+                </div>
+            ))}
+        </div>
+    );
 }
+
 
 export default ListView;
