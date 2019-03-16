@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import officesAPI from '../api/offices';
 import PulseLoader from 'react-spinners/PulseLoader';
-
+import ReadMoreReact from 'read-more-react';
 
 class ListView extends Component{
     constructor(props){
@@ -35,10 +35,7 @@ class ListView extends Component{
                     />
                 </div>
             );
-
         }
-
-
         return(
             <div className='view'>
                 {this.state.officesList.map( office => (
@@ -52,8 +49,16 @@ class ListView extends Component{
                         </div>
                         <div className='column description-column'>
                             <div className='office-description'>
-                                <h4>{office.name}</h4>
-                                <p>{office.description}</p>
+                                <h3 className='office-name'>{office.name}</h3>
+
+                                    <ReadMoreReact
+                                        text={office.description}
+                                        min={1}
+                                        ideal={100}
+                                        max={200}
+                                        readMoreText='read more'
+                                    />
+
                             </div>
                         </div>
 
@@ -67,6 +72,6 @@ class ListView extends Component{
         return this.renderData();
     }
 
-};
+}
 
 export default ListView;

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import officesAPI from '../api/offices';
 import PulseLoader from 'react-spinners/PulseLoader';
+import ReadMoreReact from 'read-more-react';
 
 
 class GridView extends Component{
@@ -13,7 +14,6 @@ class GridView extends Component{
 
     componentDidMount(){
         this.fetchOffices();
-
     }
 
     fetchOffices = async ()=>{
@@ -35,10 +35,7 @@ class GridView extends Component{
                     />
                 </div>
             );
-
         }
-
-
         return(
             <div className='view'>
                 <div className='margin-fix'>
@@ -53,18 +50,22 @@ class GridView extends Component{
                                     }
                                 </div>
                                 <div className='card-description'>
+                                    <h3 className='card-title'>{office.name}</h3>
                                     <div className='card-text'>
-                                        <h4>{office.name}</h4>
-                                        <p>{office.description}</p>
+                                        <ReadMoreReact
+                                            text={office.description}
+                                            min={1}
+                                            ideal={100}
+                                            max={200}
+                                            readMoreText='read more'
+                                        />
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-
             </div>
-
         );
     };
 

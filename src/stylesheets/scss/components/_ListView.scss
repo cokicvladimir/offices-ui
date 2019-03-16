@@ -1,11 +1,7 @@
 
-.view{
-  background-color: #00acc6;
-  padding: 2rem 0;
-}
-
 .list-view-row{
-  margin-top:1rem;
+  margin-top:2rem;
+  align-items: center;
 
 }
 
@@ -15,7 +11,8 @@
   margin-left: 2rem;
 }
 .description-column{
-  border-bottom: 1px solid #009999;
+  border-bottom: 1px solid rgba(0, 88, 113, 0.25);
+  margin-left: 1rem;
 }
 // loading-bar details:    https://github.com/davidhu2000/react-spinners
 .loading-bar{
@@ -24,6 +21,7 @@
 }
 
 .image{
+  box-shadow: 0px 2px 6px -3px rgba(0,0,0,0.8);
   display: inline-flex;
   width: 6rem;
   height: 6rem;
@@ -33,14 +31,13 @@
   text-align: center;
   margin: 0 auto;
   background-color: gainsboro;
-
   justify-content:center;
   align-items:center;
 }
 
 .image span{
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 
 }
 .image img{
@@ -48,9 +45,6 @@
   margin: 0 auto;
   height: 100%;
   width: auto;
-
-  //max-width:100%;
-
 }
 
 .office-description{
@@ -59,11 +53,26 @@
   padding-bottom: 1rem;
   padding-right: 1.5rem;
   font-size: 1.6rem;
-  color: #003333;
+  color: #003c44;
 }
 
-
-.office-description>h1, h2,h3,h4,h5 {
+.office-name {
   color: #FFFFFF;
   padding-bottom: 1rem;
+  font-weight: lighter;
+}
+
+//MOBILE
+
+@media only screen and (max-width: 320px) {
+  .image-column{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .image{
+    width: 7rem;
+    height: 7rem;
+  }
 }

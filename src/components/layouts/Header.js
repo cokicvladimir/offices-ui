@@ -7,21 +7,23 @@ class Header extends Component{
         return(
             <div className='row header'>
                 <div className='logo'>
-                    <h2>Offices</h2>
+                    <NavLink to='/' activeClassName='is-active' exact={true}>
+                        <h1>Offices</h1>
+                    </NavLink>
+
                 </div>
                 <div className='nav-list'>
                     <NavLink to='/' activeClassName='is-active' exact={true}>
-                        List
+                        <span>List</span>
                     </NavLink>
                     <NavLink to='/grid' activeClassName='is-active' exact={true}>
-                        Grid
+                        <span>Grid</span>
                     </NavLink>
                 </div>
             </div>
         );
     }
 }
-
 
 export default Header;
 

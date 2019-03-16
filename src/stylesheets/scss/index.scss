@@ -3,12 +3,16 @@
   padding: 0;
 }
 
+$color-white: #FFFFFF;
+$main-color: #00acc6;
+
+
 html{
   font-size: 62.5% ; //convert 1rem = 10px
 }
 
 body {
-  background-color: #F3F3EE;
+  background-color: $color-white;
   margin: 0;
   padding: 0;
   font-size: 14px; //fix for browsers that don't support rem units
@@ -29,14 +33,26 @@ ul{
   list-style-type: none;
 }
 
+@font-face {
+  font-family: "Simplifica";
+  src: url("../assets/SIMPLIFICATypeface.ttf") format("truetype");
+}
+
 .content{
   display: flex;
   padding: 2rem;
   min-height: 80vh;
 }
 
+.view{
+  background-color: $main-color;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
 
-
+//IMPORTS
 @import 'helpers/helpers';
 @import 'components/Header';
 @import 'components/ListView';

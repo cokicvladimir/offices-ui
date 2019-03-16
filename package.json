@@ -12,6 +12,7 @@
     "react-scripts": "2.1.8",
     "react-spinners": "^0.5.3",
     "reactstrap": "^7.1.0",
+    "read-more-react": "^1.0.9",
     "sass": "^1.17.2"
   },
   "scripts": {

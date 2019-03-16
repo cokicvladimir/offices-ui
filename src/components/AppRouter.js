@@ -8,7 +8,6 @@ import NotFoundPage from './NotFoundPage';
 
 class AppRouter extends Component{
 
-
     render(){
         return(
             <BrowserRouter>

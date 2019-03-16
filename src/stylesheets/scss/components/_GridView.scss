@@ -9,18 +9,17 @@
 
 .card{
   border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(0, 65, 73, 0.5);
   //Calculating card Width by subtracting sum of horizontal margins and paddings of a card(4rem)
   // from desired card widthPercentage (25% = 4 card displaying per row).
-  flex: 0 1 calc(25% - 4rem);
-  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  flex: 0 1 calc(25% - 8rem);
   background-color: #FFFFFF;
   color: #252422;
   min-height: 10rem;
-  padding: 1rem 1rem;
+  padding: 2rem 3rem;
   margin: 1rem 1rem;
   text-align: justify;
-  font-family: 'Muli', "Helvetica", Arial, sans-serif;
-
+  //font-family: "Helvetica", Arial, sans-serif;
 }
 
 .card-image{
@@ -28,22 +27,38 @@
   flex-basis: 8rem;
 }
 
-.card-text>h1, h2,h3,h4,h5 {
-  //color: black;
-  //padding-bottom: 1rem;
+.card-title{
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
+
+.read-more-button{
+  color:#003c44;
+  font-weight: bold;
+}
+
+.read-more-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+//MOBILE
 
 @media only screen and (max-width: 600px) {
-  .card {flex: 0 1 calc(100% - 4rem);}
+  .card {flex: 0 1 calc(100% - 8rem);}
 }
 
-@media only screen and (min-width: 600px)and (max-width: 767px) {
-  .card {flex: 0 1 calc(50% - 4rem);}
+@media only screen and (min-width: 601px)and (max-width: 767px) {
+  .card {flex: 0 1 calc(50% - 8rem);}
 }
 
-@media only screen and (min-width: 767px)and (max-width: 862px) and (orientation: landscape) {
-  .card {flex: 0 1 calc(33% - 4rem);}
+@media only screen and (min-width: 768px)and (max-width: 1440px){
+  .card {flex: 0 1 calc(33.33% - 8rem);}
 }
+
+
 
 
 
