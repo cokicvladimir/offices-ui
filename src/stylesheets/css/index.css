@@ -90,6 +90,14 @@ ul {
   flex: 9;
 }
 
+.truncate {
+  display: block;
+  width: 30vh;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .header {
   min-height: 8rem;
   background-color: #00acc6;
@@ -127,7 +135,7 @@ ul {
   font-size: 1.8rem;
 }
 
-.nav-list a:hover, .nav-list a:focus {
+.is-active {
   border-bottom: 2px solid #27d1e8;
 }
 
@@ -233,6 +241,10 @@ ul {
 .card-image {
   display: flex;
   flex-basis: 8rem;
+}
+
+.card-image > div {
+  margin: 0 auto;
 }
 
 .card-title {

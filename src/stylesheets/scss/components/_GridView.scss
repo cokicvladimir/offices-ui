@@ -25,6 +25,11 @@
 .card-image{
   display: flex;
   flex-basis: 8rem;
+  //justify-items: center;
+}
+
+.card-image>div{
+  margin:0 auto;
 }
 
 .card-title{
@@ -57,7 +62,6 @@
 @media only screen and (min-width: 768px)and (max-width: 1440px){
   .card {flex: 0 1 calc(33.33% - 8rem);}
 }
-
 
 
 
