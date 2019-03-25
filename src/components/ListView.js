@@ -2,6 +2,19 @@ import React from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 import ReadMoreReact from 'read-more-react';
 
+
+/*
+Read first review notes in GridView:
+
+1. Reuse CustomLoading component
+2. Reuse Avatar component
+3. Apply ellipsis approach for truncating text instead of 3rd party ReadMoreText
+4. Remove console log
+
+
+
+ */
+
 const ListView = (props)=>{
 
     if (props.offices.length === 0) {
