@@ -1,45 +1,26 @@
 import React from 'react';
-import PulseLoader from 'react-spinners/PulseLoader';
-import ReadMoreReact from 'read-more-react';
+import CustomLoader from './CustomLoader';
+import Avatar from './Avatar';
 
-const ListView = (props)=>{
+function ListView({offices}){
 
-    if (props.offices.length === 0) {
-        console.log("NO DATA");
+    if (offices.length === 0) {
         return (
-            <div className='loading-bar'>
-                <PulseLoader
-                    sizeUnit={'px'}
-                    size={15}
-                    margin={'8px'}
-                    color={'#00acc6'}
-                    loading={true}
-                />
-            </div>
+            <CustomLoader/>
         );
     }
 
     return(
         <div className='view'>
-            {props.offices.map( office => (
+            {offices.map( office => (
                 <div key={office.id} className='row list-view-row'>
                     <div className='image-column'>
-                        {
-                            office.photo === null ?
-                                (<div className='image'><span>{office.name.charAt(0).toUpperCase()}</span></div>) :
-                                (<div className='image'><img src={office.photo} alt={office.name}/></div>)
-                        }
+                        <Avatar office={office}/>
                     </div>
                     <div className='column description-column'>
                         <div className='office-description'>
                             <h3 className='office-name'>{office.name}</h3>
-                            <ReadMoreReact
-                                text={office.description}
-                                min={1}
-                                ideal={100}
-                                max={200}
-                                readMoreText='read more'
-                            />
+                            <span className='truncate'>{office.description}</span>
                         </div>
                     </div>
 
@@ -48,6 +29,5 @@ const ListView = (props)=>{
         </div>
     );
 }
-
 
 export default ListView;

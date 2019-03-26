@@ -35,3 +35,12 @@
 .column-9x{
   flex: 9;
 }
+
+.truncate{
+  display: block;
+  width: 30vh;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+

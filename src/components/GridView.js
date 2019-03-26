@@ -1,21 +1,12 @@
 import React from 'react';
-import PulseLoader from 'react-spinners/PulseLoader';
-import ReadMoreReact from 'read-more-react';
+import CustomLoader from './CustomLoader';
+import Avatar from "./Avatar";
 
-const GridView = (props)=>{
+function GridView({offices}){
 
-    if (props.offices.length === 0) {
-        console.log("NO DATA");
+    if (offices.length === 0) {
         return (
-            <div className='loading-bar'>
-                <PulseLoader
-                    sizeUnit={'px'}
-                    size={15}
-                    margin={'8px'}
-                    color={'#00acc6'}
-                    loading={true}
-                />
-            </div>
+            <CustomLoader/>
         );
     }
 
@@ -23,25 +14,15 @@ const GridView = (props)=>{
         <div className='view'>
             <div className='margin-fix'>
                 <div className='row grid-view'>
-                    {props.offices.map( office => (
+                    {offices.map( office => (
                         <div key={office.id} className='card'>
                             <div className='card-image'>
-                                {
-                                    office.photo === null ?
-                                        (<div className='image'><span>{office.name.charAt(0).toUpperCase()}</span></div>) :
-                                        (<div className='image'><img src={office.photo} alt={office.name}/></div>)
-                                }
+                                <Avatar office={office}/>
                             </div>
                             <div className='card-description'>
                                 <h3 className='card-title'>{office.name}</h3>
                                 <div className='card-text'>
-                                    <ReadMoreReact
-                                        text={office.description}
-                                        min={1}
-                                        ideal={100}
-                                        max={200}
-                                        readMoreText='read more'
-                                    />
+                                    <span className='truncate'>{office.description}</span>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +31,7 @@ const GridView = (props)=>{
             </div>
         </div>
     );
-};
+}
 
 export default GridView;
 
